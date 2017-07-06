@@ -32,25 +32,28 @@
 
 // YOUR CODE HERE
 //letterCount is a higher level f(n) that invokes letters()
-function letterCount (theWord, letters){
+function letterCount(theWord, letters) {
   var entry = letters(theWord);
-  console.log(entry);
+  //console.log(entry);
+
   var count = {};
-  entry.forEach(function(i) { count[i] = (count[i]||0)+1;  });
+  entry.forEach(function(letter) {
+    count[letter] = (count[letter] || 0) + 1;
+  });
   console.log(count);
 }
 
 // split word into array
-function letters (taco) {
- var entry = taco.split("");
- //console.log(entry);
- return entry;
+function letters(taco) {
+  var entry = taco.split("");
+  //console.log(entry);
+  return entry;
 }
 
 // invoking letterCount.
 letterCount("apple", letters);
 
- 
+
 // creating an object from an array
 // var array = ["a", "p", "p", "l", "e"]
 //
