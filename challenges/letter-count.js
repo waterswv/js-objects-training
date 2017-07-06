@@ -31,3 +31,33 @@
 */
 
 // YOUR CODE HERE
+//letterCount is a higher level f(n) that invokes letters()
+function letterCount (theWord, letters){
+  var entry = letters(theWord);
+  console.log(entry);
+  var count = {};
+  entry.forEach(function(i) { count[i] = (count[i]||0)+1;  });
+  console.log(count);
+}
+
+// split word into array
+function letters (taco) {
+ var entry = taco.split("");
+ //console.log(entry);
+ return entry;
+}
+
+// invoking letterCount.
+letterCount("apple", letters);
+
+ 
+// creating an object from an array
+// var array = ["a", "p", "p", "l", "e"]
+//
+// var obj = {};
+// array.forEach(function(data){
+//     obj[data[0]] = (data[1] = "letter")
+// });
+
+// alphabet array
+// alphabet = ["a", "b", "c", "d", "e", "f", "g", "h" , "i", "j" , "k" ,"l" , "m" , "n" , "o" , "p" , "q", "r", "s", "t", "u" , "v", "w", "x" , "y", "z"];
